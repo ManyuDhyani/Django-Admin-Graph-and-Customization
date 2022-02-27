@@ -28,3 +28,20 @@ class Student(models.Model):
 
     class Meta:
         verbose_name = 'Student'
+
+
+################# Pie Chart Model#################
+
+class Country(models.Model):
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
+
+class City(models.Model):
+    name = models.CharField(max_length=30)
+    country = models.ForeignKey(Country, on_delete=models.CASCADE)
+    population = models.PositiveIntegerField()
+
+    def __str__(self):
+        return self.name

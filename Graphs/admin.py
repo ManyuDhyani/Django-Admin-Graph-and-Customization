@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Student
+from .models import Student, Country, City
 
 class StudentAdmin(admin.ModelAdmin):
     list_display = ('full_name', 'language', 'grades', 'gender')
@@ -10,3 +10,5 @@ class StudentAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Student, StudentAdmin)
+admin.site.register(Country)
+admin.site.register(City)
