@@ -11,6 +11,19 @@ This project is on-Progress.
 ### Run command: python manage.py runserver
 
 ##Overview
-The graph attached to student table for Gender, Grades and Language (Subjects).
+The graph integrated to student table for Gender, Grades and Language (Subjects).
 
-![](Graphs.png)
+![](Readme_Images/Graphs.png)
+
+Pie Chart
+
+![](Readme_Images/pieChart.png)
+
+Bar Graph
+
+![](Readme_Images/barChart.png)
+
+HighGraph
+
+![](Readme_Images/highChart.png)
+

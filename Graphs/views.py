@@ -1,3 +1,4 @@
+from urllib import request
 from django.shortcuts import render
 from .models import City
 from django.db.models import Sum
@@ -31,3 +32,6 @@ def population_chart(request):
         'labels': labels,
         'data': data,
     })
+
+def high_chart(request):
+    return render(request, "highChart.html")
