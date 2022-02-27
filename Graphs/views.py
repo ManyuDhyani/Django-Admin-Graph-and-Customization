@@ -5,7 +5,7 @@ def pie_chart(request):
     labels = []
     data = []
 
-    queryset = City.objects.order_by('-population')[:5]
+    queryset = City.objects.order_by('-population')
     print(queryset)
     for city in queryset:
         labels.append(city.name)

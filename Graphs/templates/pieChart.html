@@ -7,15 +7,16 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
   <script>
+    var randomColorGenerator = function () {
+      return '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
+    };
 
     var config = {
       type: 'pie',
       data: {
         datasets: [{
           data: {{ data|safe }},
-          backgroundColor: [
-            '#351990', '#fe3199', '#09a880', '#f3bd0f', '#2e1f05'
-          ],
+          backgroundColor: [{% for label in labels %}randomColorGenerator(),{% endfor %}],
           label: 'Population'
         }],
         labels: {{ labels|safe }}
