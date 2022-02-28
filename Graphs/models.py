@@ -30,7 +30,7 @@ class Student(models.Model):
         verbose_name = 'Student'
 
 
-################# Pie Chart Model#################
+################# Pie Chart & Bar Chart Model#################
 
 class Country(models.Model):
     name = models.CharField(max_length=30)
