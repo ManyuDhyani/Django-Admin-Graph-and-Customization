@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Student, Country, City
+from .models import Student, Country, City, Person
 from import_export import resources
-from import_export.admin import ExportActionMixin
+from import_export.admin import ExportActionMixin, ImportExportModelAdmin
 from import_export.fields import Field
-
+from .resources import PersonResource
 
 admin.site.register(Country)
 admin.site.register(City)
@@ -26,3 +26,9 @@ class StudentAdmin(ExportActionMixin, admin.ModelAdmin):
     change_list_template = 'change_list_graph.html'
 
 admin.site.register(Student, StudentAdmin)
+
+
+class PersonAdmin(ImportExportModelAdmin, admin.ModelAdmin):
+    resources_class = PersonResource
+
+admin.site.register(Person, PersonAdmin)
