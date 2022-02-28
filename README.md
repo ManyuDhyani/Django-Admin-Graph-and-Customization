@@ -21,7 +21,7 @@ Pie Chart
 
 Bar Graph
 
-![](Readme_Images/barChart.png)
+![](Readme_Images/barGraph.png)
 
 HighGraph
 
